@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>퀴즈1: 인공지능은 인간의 감정을 이해할 수 있다. (O/X)</h2>
+    <div >
+       <button onclick="checkOX('O')">O</button>
+       <button onclick = "checkOX('X')">X</button>    
+    </div>
+    <div id="ox-answer"  style="display: none;">
+       정답입니다! 
+    </div>
+    <div id="ox-wrong"  style="display: none;">
+          오답입니다. 
+    </div>
+    
+  <script>  
+     function checkOX(answer) {
+       if (answer === 'X') { //정답이 X임
+          document.getElementById('ox-answer').style.display = 'block';
+          document.getElementById('ox-wrong').style.display = 'none';
+       } else {
+          document.getElementById('ox-answer').style.display = 'none';
+          document.getElementById('ox-wrong').style.display = 'block';
+       }
+    }
+  </script>    
+</body>
+</html>
